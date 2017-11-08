@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        if true {
+            let request = RandomUserAPI()
+            
+            Session.send(request) { result in
+                switch result {
+                case .success(let userData):
+                    print("seed : \(userData.seed)")
+                    print("results : \(userData.results)")
+                    print("page: \(userData.page)")
+                    print("version: \(userData.version)")
+                case .failure(let error):
+                    print("error: \(error)")
+                }
+            }
+        }
+        
         return true
     }
 

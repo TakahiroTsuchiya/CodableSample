@@ -45,8 +45,11 @@ struct Results: Codable {
     let location: Location
     let email: String
     let login: Login
+    let dob: String
+    let registered: String
     let phone: String
     let cell: String
+    let id: Id
     let picture: Picture
     let nat: String
 }
@@ -73,6 +76,10 @@ struct Login: Codable {
     let sha256: String
 }
 
+struct Id: Codable {
+    let name: String
+    let value: String
+}
 struct Picture: Codable {
     let large: String
     let medium: String

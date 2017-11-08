@@ -51,6 +51,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         print("login > sha1: \(user.login.sha1)")
                         print("login > sha256: \(user.login.sha256)")
                         print("login > username: \(user.login.username)")
+
+                        print("dob : \(user.dob)")
+                        print("registered : \(user.registered)")
+                        print("phone : \(user.phone)")
+                        print("cell : \(user.cell)")
+
+//                        print("id : \(user.id)")
+//                        print("id > name: \(user.id.name)")
+//                        print("id > value: \(user.id.value)")
+
                         print("picture : \(user.picture)")
                         print("picture > large: \(user.picture.large)")
                         print("picture > medium: \(user.picture.medium)")

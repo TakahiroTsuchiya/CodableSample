@@ -23,59 +23,63 @@ struct RandomUserAPI: Request {
     var path: String {
         return "/api"
     }
-    
+
+    var dataParser: DataParser {
+        return DecodableDataParser()
+    }
+
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> UserData {
-        return try UserData(object: object)
+        let decoder = JSONDecoder()
+        return try decoder.decode(UserData.self, from: object as! Data)
     }
 }
 
-struct UserData {
-//    let name: Name
-//    let location: Location
-
-    let seed: String
-    let results: Int
-    let page: Int
-    let version: String
-
-    init(object: Any) throws {
-        guard let dictionary = object as? [String: Any]
-//            , let name = dictionary["name"] as?  [String: Any]
-//            , let location = dictionary["location"] as? Location
-            , let info = dictionary["info"] as? [String: Any]
-            , let seed = info["seed"] as? String
-            , let results = info["results"] as? Int
-            , let page = info["page"] as? Int
-            , let version = info["version"] as? String
-            else {
-                throw ResponseError.unexpectedObject(object)
-        }
-
-//        self.name.title = name["title"]
-//        self.name.first = name["first"]
-//        self.name.last = name["last"]
-
-        self.seed = seed
-        self.results = results
-        self.page = page
-        self.version = version
-    }
+struct UserData: Codable {
+    let results: [Results]
+    let info: Info
 }
 
-struct Name {
+struct Results: Codable {
+    let gender: String
+    let name: Name
+    let location: Location
+    let email: String
+    let login: Login
+    let phone: String
+    let cell: String
+    let picture: Picture
+    let nat: String
+}
+
+struct Name: Codable {
     let title: String
     let first: String
     let last: String
 }
 
-struct Location {
+struct Location: Codable {
     let street: String
     let city: String
     let state: String
-    let postcode: String
+    let postcode: Int
 }
 
-struct Info {
+struct Login: Codable {
+    let username: String
+    let password: String
+    let salt: String
+    let md5: String
+    let sha1: String
+    let sha256: String
+}
+
+struct Picture: Codable {
+    let large: String
+    let medium: String
+    let thumbnail: String
+}
+
+struct Info: Codable {
     let seed: String
     let results: Int
     let page: Int

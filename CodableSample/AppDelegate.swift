@@ -17,62 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
-        if true {
-            let request = RandomUserAPI()
-            
-            Session.send(request) { result in
-                switch result {
-                case .success(let userData):
-                    print("userData : \(userData)")
-                    print("info : \(userData.info)")
-                    print("page : \(userData.info.page)")
-                    print("results : \(userData.info.results)")
-                    print("seed : \(userData.info.seed)")
-                    print("version : \(userData.info.version)")
-                    print("results : \(userData.results)")
-
-                    for user in userData.results {
-                        print("email : \(user.email)")
-                        print("gender : \(user.gender)")
-                        print("location : \(user.location)")
-                        print("location > city: \(user.location.city)")
-                        print("location > postcode: \(user.location.postcode)")
-                        print("location > state: \(user.location.state)")
-                        print("location > street: \(user.location.street)")
-                        print("name : \(user.name)")
-                        print("name > first : \(user.name.first)")
-                        print("name > last : \(user.name.last)")
-                        print("name > title : \(user.name.title)")
-                        print("login : \(user.login)")
-                        print("login > md5: \(user.login.md5)")
-                        print("login > password: \(user.login.password)")
-                        print("login > salt: \(user.login.salt)")
-                        print("login > sha1: \(user.login.sha1)")
-                        print("login > sha256: \(user.login.sha256)")
-                        print("login > username: \(user.login.username)")
-
-                        print("dob : \(user.dob)")
-                        print("registered : \(user.registered)")
-                        print("phone : \(user.phone)")
-                        print("cell : \(user.cell)")
-
-//                        print("id : \(user.id)")
-//                        print("id > name: \(user.id.name)")
-//                        print("id > value: \(user.id.value)")
-
-                        print("picture : \(user.picture)")
-                        print("picture > large: \(user.picture.large)")
-                        print("picture > medium: \(user.picture.medium)")
-                        print("picture > thumbnail: \(user.picture.thumbnail)")
-                    }
-                    
-                case .failure(let error):
-                    print("error: \(error)")
-                }
-            }
-        }
-        
         return true
     }
 

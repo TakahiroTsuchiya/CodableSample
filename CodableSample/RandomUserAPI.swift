@@ -32,6 +32,14 @@ struct RandomUserAPI: Request {
         let decoder = JSONDecoder()
         return try decoder.decode(UserData.self, from: object as! Data)
     }
+
+    var parameters: Any? {
+        return ["format" : "json"
+            , "results" : "2"
+//            , "password" : "special,upper,lower,number,8,32"
+//            , "inc" : "name,login,email,gender,registered,phone,picture"
+        ]
+    }
 }
 
 struct UserData: Codable {

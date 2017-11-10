@@ -4,8 +4,10 @@
 target 'CodableSample' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'APIKit'
   # Pods for CodableSample
+  pod 'APIKit'
+#  pod 'SDWebImage'
+  pod 'AlamofireImage'
 
   target 'CodableSampleTests' do
     inherit! :search_paths

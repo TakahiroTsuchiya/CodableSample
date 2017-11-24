@@ -44,7 +44,7 @@ class CodableSampleTests: XCTestCase {
                     
                     print("location : \(user.location)")
                     print("location > city: \(user.location.city)")
-                    print("location > postcode: \(user.location.postcode)")
+                    print("location > postcode: \(String(describing: user.location.postcode))")
                     print("location > state: \(user.location.state)")
                     print("location > street: \(user.location.street)")
                     
@@ -65,7 +65,7 @@ class CodableSampleTests: XCTestCase {
                     
                     print("id : \(user.id)")
                     print("id > name: \(user.id.name)")
-                    print("id > value: \(user.id.value)")
+                    print("id > value: " + user.id.value!)
                     
                     print("picture : \(user.picture)")
                     print("picture > large: \(user.picture.large)")

@@ -35,8 +35,8 @@ struct RandomUserAPI: Request {
 
     var parameters: Any? {
         return ["format" : "json"
-            , "results" : "20"
-//            , "password" : "special,upper,lower,number,8,32"
+            , "results" : "10"
+            , "password" : "special,upper,lower,number,8,32"
 //            , "inc" : "name,login,email,gender,registered,phone,picture"
         ]
     }
@@ -72,7 +72,7 @@ struct Location: Codable {
     let street: String
     let city: String
     let state: String
-    let postcode: Int
+//    let postcode: Int?
 }
 
 struct Login: Codable {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		02AA5222B88FAFD3FA18130F /* Pods_CodableSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE744836983E7D45A6B23D3 /* Pods_CodableSampleUITests.framework */; };
+		0908DF241FC7E91500A0BC69 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908DF231FC7E91500A0BC69 /* DetailModel.swift */; };
+		09FE6CD81FC7DB0400DA625B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE6CD71FC7DB0400DA625B /* DetailViewController.swift */; };
 		106A7FFAD6E121A34C04CE8C /* Pods_CodableSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6816CDA855F3D5FFE36C650 /* Pods_CodableSampleTests.framework */; };
 		63CC0E261FB19C7F001DD0B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC0E251FB19C7F001DD0B3 /* AppDelegate.swift */; };
 		63CC0E281FB19C7F001DD0B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC0E271FB19C7F001DD0B3 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0908DF231FC7E91500A0BC69 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		09FE6CD71FC7DB0400DA625B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		237DD5FD3F0B2E567887EDE6 /* Pods-CodableSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodableSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodableSample/Pods-CodableSample.release.xcconfig"; sourceTree = "<group>"; };
 		30370944D48E7DB1421E93E6 /* Pods-CodableSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodableSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodableSample/Pods-CodableSample.debug.xcconfig"; sourceTree = "<group>"; };
 		517EF2836E1C2E0AB2E4B91A /* Pods-CodableSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodableSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodableSampleUITests/Pods-CodableSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 			children = (
 				63CC0E251FB19C7F001DD0B3 /* AppDelegate.swift */,
 				63CC0E271FB19C7F001DD0B3 /* ViewController.swift */,
+				09FE6CD71FC7DB0400DA625B /* DetailViewController.swift */,
+				0908DF231FC7E91500A0BC69 /* DetailModel.swift */,
 				63CC0E291FB19C7F001DD0B3 /* Main.storyboard */,
 				63CC0E2C1FB19C7F001DD0B3 /* Assets.xcassets */,
 				63CC0E2E1FB19C7F001DD0B3 /* LaunchScreen.storyboard */,
@@ -470,8 +476,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0908DF241FC7E91500A0BC69 /* DetailModel.swift in Sources */,
 				63CC0E281FB19C7F001DD0B3 /* ViewController.swift in Sources */,
 				63CC0E261FB19C7F001DD0B3 /* AppDelegate.swift in Sources */,
+				09FE6CD81FC7DB0400DA625B /* DetailViewController.swift in Sources */,
 				63E880DD1FB2E83A00CCCFE1 /* RandomUserAPI.swift in Sources */,
 				63CC0E561FB1A745001DD0B3 /* DecodableDataParser.swift in Sources */,
 			);
